@@ -9,8 +9,10 @@
     "start": "next start",
     "lint": "eslint",
     "lint-staged": "lint-staged",
-    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss,yml,yaml}\"",
     "typecheck": "tsc --noEmit",
+    "check": "bun run lint && bun run typecheck",
     "prepare": "husky"
   },
   "dependencies": {
