@@ -1,7 +1,6 @@
 "use client"
 
 import { Download, Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
 import { Kbd } from "@/components/ui/kbd"
@@ -12,9 +11,6 @@ import {
 } from "@/components/ui/tooltip"
 
 export function AppHeader() {
-  const { resolvedTheme } = useTheme()
-  const ThemeIcon = resolvedTheme === "dark" ? Moon : Sun
-
   return (
     <header className="w-full px-6 py-4">
       <div className="flex w-full items-center justify-end gap-2">
@@ -32,7 +28,8 @@ export function AppHeader() {
               size="icon"
               type="button"
             >
-              <ThemeIcon />
+              <Sun className="dark:hidden" />
+              <Moon className="hidden dark:block" />
             </Button>
           </TooltipTrigger>
           <TooltipContent>
