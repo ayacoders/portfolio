@@ -3,11 +3,16 @@
 import { type ReactNode } from "react"
 
 import { ThemeProvider } from "@/components/theme-provider"
+import { TooltipProvider } from "@/components/ui/tooltip"
 
 type AppProviderProps = {
   children: ReactNode
 }
 
 export function AppProvider({ children }: AppProviderProps) {
-  return <ThemeProvider>{children}</ThemeProvider>
+  return (
+    <TooltipProvider>
+      <ThemeProvider>{children}</ThemeProvider>
+    </TooltipProvider>
+  )
 }
