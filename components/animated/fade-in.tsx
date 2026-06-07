@@ -1,18 +1,15 @@
 "use client"
 
 import { useRef, type ReactNode } from "react"
-import gsap from "gsap"
-import { useGSAP } from "@gsap/react"
 
 import {
   animationDurations,
   animationEases,
   animationStaggers,
 } from "@/lib/animations/constants"
+import { gsap, useGSAP } from "@/lib/animations/gsap"
 import { prefersReducedMotion } from "@/lib/animations/reduced-motion"
 import { cn } from "@/lib/utils"
-
-gsap.registerPlugin(useGSAP)
 
 type FadeInProps = {
   children: ReactNode

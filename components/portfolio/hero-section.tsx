@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 import { FadeIn } from "@/components/animated/fade-in"
-import { TypewriterText } from "@/components/animated/typewriter-text"
+import { WordSequenceText } from "@/components/animated/word-sequence-text"
 
 const heroRoles = ["Builder.", "Designer.", "Developer."]
 
@@ -10,16 +10,22 @@ export default function HeroSection() {
     <section className="flex w-full flex-1 items-start py-12 md:py-20">
       <FadeIn className="flex w-full flex-col items-center gap-10 md:flex-row md:justify-start md:gap-12">
         <div className="w-full max-w-2xl min-w-0 space-y-4 md:flex-1">
-          <h3 className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-            Ethan Patrick &mdash; Full Stack Developer
+          <h3 className="font-mono text-xs tracking-widest text-muted-foreground">
+            Hi! I am
           </h3>
-          <h1 className="font-space-grotesk text-5xl leading-none font-bold text-balance md:text-7xl">
-            <TypewriterText words={heroRoles} />
+
+          <h1 className="font-space-grotesk text-5xl leading-none font-semibold text-balance text-brand-accent md:text-6xl lg:text-7xl">
+            Ethan Patrick
           </h1>
+
           <p className="max-w-xl text-muted-foreground">
             Computer Science graduate building accessible web experiences, with
             experience across national hackathons and collaborative projects.
           </p>
+
+          <h4 className="font-space-grotesk text-xl leading-none font-bold text-balance md:text-3xl">
+            <WordSequenceText words={heroRoles} />
+          </h4>
         </div>
 
         <div className="flex w-full justify-center md:shrink-0 md:basis-64">
