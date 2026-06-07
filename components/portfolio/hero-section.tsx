@@ -16,20 +16,20 @@ export default function HeroSection() {
           <h1 className="font-space-grotesk text-5xl leading-none font-bold text-balance md:text-7xl">
             <TypewriterText words={heroRoles} />
           </h1>
-          <p className="max-w-xl text-base leading-7 text-muted-foreground md:text-lg">
+          <p className="max-w-xl text-muted-foreground">
             Computer Science graduate building accessible web experiences, with
             experience across national hackathons and collaborative projects.
           </p>
         </div>
 
-        <div className="flex w-full justify-center md:shrink-0 md:basis-72">
+        <div className="flex w-full justify-center md:shrink-0 md:basis-64">
           <Image
             src="/images/profile.jpeg"
             alt="Portrait of Ethan Patrick"
             width={420}
             height={420}
             priority
-            className="aspect-square w-full max-w-64 rounded-2xl border border-border object-cover shadow-sm md:max-w-72"
+            className="aspect-square w-full max-w-56 rounded-2xl border border-border object-cover shadow-sm md:max-w-64"
           />
         </div>
       </FadeIn>
