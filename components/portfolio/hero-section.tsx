@@ -7,28 +7,10 @@ const heroRoles = ["Builder.", "Designer.", "Developer."]
 
 export default function HeroSection() {
   return (
-    <section className="flex w-full flex-1 items-start py-12 md:py-20">
-      <FadeIn className="flex w-full flex-col items-center gap-10 md:flex-row md:justify-start md:gap-12">
-        <div className="w-full max-w-2xl min-w-0 space-y-4 md:flex-1">
-          <h3 className="font-mono text-xs tracking-widest text-muted-foreground">
-            Hi! I am
-          </h3>
-
-          <h1 className="font-space-grotesk text-5xl leading-none font-semibold text-balance text-brand-accent md:text-6xl lg:text-7xl">
-            Ethan Patrick
-          </h1>
-
-          <p className="max-w-xl text-muted-foreground">
-            Computer Science graduate building accessible web experiences, with
-            experience across national hackathons and collaborative projects.
-          </p>
-
-          <h4 className="font-space-grotesk text-xl leading-none font-bold text-balance md:text-3xl">
-            <WordSequenceText words={heroRoles} />
-          </h4>
-        </div>
-
-        <div className="flex w-full justify-center md:shrink-0 md:basis-64">
+    <section className="flex w-full flex-1 items-center justify-center py-12 md:py-20">
+      <FadeIn className="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 md:flex-row md:justify-center md:gap-12">
+        {/* Profile Section */}
+        <div className="flex w-full justify-center md:block md:w-auto md:shrink-0 md:basis-64">
           <Image
             src="/images/profile.jpeg"
             alt="Portrait of Ethan Patrick"
@@ -37,6 +19,26 @@ export default function HeroSection() {
             priority
             className="aspect-square w-full max-w-56 rounded-2xl border border-border object-cover shadow-sm md:max-w-64"
           />
+        </div>
+
+        {/* Text Section */}
+        <div className="w-full max-w-2xl min-w-0">
+          <h3 className="font-mono text-xs tracking-widest text-muted-foreground">
+            Hi! I am
+          </h3>
+
+          <h1 className="-ml-1 font-space-grotesk text-5xl leading-none font-semibold text-balance text-brand-accent md:-ml-1 md:text-6xl lg:-ml-1 lg:text-7xl">
+            Ethan Patrick
+          </h1>
+
+          <p className="max-w-xl text-muted-foreground">
+            Computer Science graduate building accessible web experiences, with
+            experience across national hackathons and collaborative projects.
+          </p>
+
+          <h4 className="mt-1 font-space-grotesk text-xl leading-none font-bold text-balance md:text-3xl">
+            <WordSequenceText words={heroRoles} />
+          </h4>
         </div>
       </FadeIn>
     </section>

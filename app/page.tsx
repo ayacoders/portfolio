@@ -6,7 +6,7 @@ export default function Page() {
     <div className="flex min-h-svh flex-col">
       <AppHeader />
       <main className="flex flex-1 px-6">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-center">
+        <div className="align-center mx-auto flex w-full max-w-6xl flex-col items-center">
           <HeroSection />
         </div>
       </main>
