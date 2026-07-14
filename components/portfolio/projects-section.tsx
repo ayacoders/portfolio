@@ -1,11 +1,11 @@
-import { FadeIn } from "@/components/animated/fade-in"
+import { SlideBlurIn } from "@/components/animated/slide-blur-in"
 import { ProjectCard } from "@/components/portfolio/project-card"
 import { projects } from "@/lib/data/projects"
 
 export default function ProjectsSection() {
   return (
     <section className="flex h-full w-full shrink-0 justify-center px-6 py-12 md:py-20">
-      <FadeIn className="mx-auto flex w-full max-w-4xl flex-col gap-8">
+      <SlideBlurIn className="mx-auto flex w-full max-w-4xl flex-col gap-8">
         <h2 className="mx-auto font-space-grotesk text-4xl leading-none font-semibold text-balance md:text-5xl">
           Featured <span className="text-brand-accent">Projects</span>
         </h2>
@@ -15,7 +15,7 @@ export default function ProjectsSection() {
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
-      </FadeIn>
+      </SlideBlurIn>
     </section>
   )
 }

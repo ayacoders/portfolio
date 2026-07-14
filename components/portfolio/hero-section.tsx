@@ -1,7 +1,7 @@
 import Image from "next/image"
 
-import { FadeIn } from "@/components/animated/fade-in"
 import { Float } from "@/components/animated/float"
+import { SlideBlurIn } from "@/components/animated/slide-blur-in"
 import { WordSequenceText } from "@/components/animated/word-sequence-text"
 
 const heroRoles = ["Builder.", "Designer.", "Developer."]
@@ -9,7 +9,7 @@ const heroRoles = ["Builder.", "Designer.", "Developer."]
 export default function HeroSection() {
   return (
     <section className="flex h-full w-full shrink-0 items-center justify-center px-6 py-12 md:py-20">
-      <FadeIn className="mx-auto flex w-full max-w-5xl">
+      <SlideBlurIn className="mx-auto flex w-full max-w-5xl">
         <div className="w-full">
           <Float
             className="flex w-full flex-col items-center gap-6 md:flex-row md:justify-center md:gap-12"
@@ -50,7 +50,7 @@ export default function HeroSection() {
             </div>
           </Float>
         </div>
-      </FadeIn>
+      </SlideBlurIn>
     </section>
   )
 }

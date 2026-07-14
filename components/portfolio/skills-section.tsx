@@ -1,11 +1,11 @@
-import { FadeIn } from "@/components/animated/fade-in"
+import { SlideBlurIn } from "@/components/animated/slide-blur-in"
 import { Badge } from "@/components/ui/badge"
 import { skillGroups } from "@/lib/data/skills"
 
 export default function SkillsSection() {
   return (
     <section className="flex h-full w-full shrink-0 items-center justify-center px-6 py-12 md:py-20">
-      <FadeIn className="mx-auto flex w-full max-w-4xl flex-col gap-8">
+      <SlideBlurIn className="mx-auto flex w-full max-w-4xl flex-col gap-8">
         <h2 className="mx-auto font-space-grotesk text-4xl leading-none font-semibold text-balance md:text-5xl">
           Skills & <span className="text-brand-accent">Technologies</span>
         </h2>
@@ -29,7 +29,7 @@ export default function SkillsSection() {
             </div>
           </div>
         ))}
-      </FadeIn>
+      </SlideBlurIn>
     </section>
   )
 }
