@@ -9,7 +9,7 @@ export default function Page() {
     <div className="h-svh">
       <AppHeader />
       <main className="h-full">
-        <ScrollSnap className="h-full overflow-y-auto">
+        <ScrollSnap className="h-full [scrollbar-width:none] overflow-y-auto [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           <HeroSection />
           <SkillsSection />
           <ProjectsSection />
