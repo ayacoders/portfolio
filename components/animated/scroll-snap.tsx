@@ -50,7 +50,7 @@ export function ScrollSnap({ children, className }: ScrollSnapProps) {
         preventDefault: true,
         target: container,
         tolerance: 10,
-        type: "wheel,touch,pointer",
+        type: "wheel,touch",
         wheelSpeed: -1,
         onDown: () => goToSection(index - 1),
         onUp: () => goToSection(index + 1),
