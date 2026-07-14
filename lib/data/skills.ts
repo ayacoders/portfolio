@@ -18,6 +18,7 @@ import {
   SiPostman,
   SiPython,
   SiReact,
+  SiSqlite,
   SiTailwindcss,
   SiTypescript,
   SiVercel,
@@ -79,6 +80,8 @@ export const skillGroups: { items: Skill[]; title: string }[] = [
       { brand: true, icon: SiMysql, name: "MySQL" },
       { brand: true, icon: SiPostgresql, name: "PostgreSQL" },
       { brand: true, icon: SiMongodb, name: "MongoDB" },
+      { brand: true, icon: SiSqlite, name: "SQLite" },
+      { icon: Database, name: "SQL Server" },
     ],
   },
   {
