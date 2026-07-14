@@ -21,7 +21,7 @@ const skillGroups = [
 
 export default function SkillsSection() {
   return (
-    <section className="flex h-full w-full shrink-0 snap-start items-center justify-center px-6 py-12 md:py-20">
+    <section className="flex h-full w-full shrink-0 items-center justify-center px-6 py-12 md:py-20">
       <FadeIn className="mx-auto flex w-full max-w-4xl flex-col gap-6">
         <h2 className="font-space-grotesk text-3xl leading-none font-semibold text-balance md:text-4xl">
           Skills & Technologies
