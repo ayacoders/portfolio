@@ -1,14 +1,14 @@
 import { AppHeader } from "@/components/layout/app-header"
 import HeroSection from "@/components/portfolio/hero-section"
+import SkillsSection from "@/components/portfolio/skills-section"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh flex-col">
+    <div className="flex h-svh flex-col">
       <AppHeader />
-      <main className="flex flex-1 px-6">
-        <div className="align-center mx-auto flex w-full max-w-6xl flex-col items-center">
-          <HeroSection />
-        </div>
+      <main className="min-h-0 flex-1 snap-y snap-mandatory overflow-y-auto scroll-smooth">
+        <HeroSection />
+        <SkillsSection />
       </main>
     </div>
   )

@@ -8,7 +8,7 @@ const heroRoles = ["Builder.", "Designer.", "Developer."]
 
 export default function HeroSection() {
   return (
-    <section className="flex w-full flex-1 items-center justify-center py-12 md:py-20">
+    <section className="flex h-full w-full shrink-0 snap-start items-center justify-center px-6 py-12 md:py-20">
       <FadeIn className="mx-auto flex w-full max-w-4xl">
         <div className="w-full">
           <Float
