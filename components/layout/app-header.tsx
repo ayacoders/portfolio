@@ -12,7 +12,7 @@ import {
 
 export function AppHeader() {
   return (
-    <header className="w-full px-6 py-4">
+    <header className="fixed inset-x-0 top-0 z-50 w-full px-6 py-4">
       <div className="flex w-full items-center justify-end gap-2">
         <Button asChild variant="ghost">
           <a href="/files/Bandebas_Resume.pdf" download>
