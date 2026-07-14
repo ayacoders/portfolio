@@ -21,6 +21,7 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <Card size="sm">
       <Image
+        loading="eager"
         src={project.image}
         alt={`${project.title} preview`}
         width={640}
@@ -33,7 +34,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <CardDescription>{project.description}</CardDescription>
       </CardHeader>
 
-      <CardFooter className="gap-1 border-t-0 bg-transparent">
+      <CardFooter className="flex justify-end gap-1 border-t-0 bg-transparent">
         <Tooltip>
           <TooltipTrigger asChild>
             <Button asChild variant="ghost" size="lg">
@@ -43,7 +44,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 rel="noopener noreferrer"
                 aria-label={`${project.title} repository`}
               >
-                <SiGithub color="default" />
+                <SiGithub color="default" className="dark:invert" />
               </a>
             </Button>
           </TooltipTrigger>

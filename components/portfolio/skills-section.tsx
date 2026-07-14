@@ -22,7 +22,10 @@ export default function SkillsSection() {
                   variant="outline"
                   className="h-7 gap-1.5 px-2.5 text-xs sm:h-9 sm:gap-2 sm:px-4 sm:text-base [&>svg]:size-3.5! sm:[&>svg]:size-5!"
                 >
-                  <item.icon color={item.brand ? "default" : "currentColor"} />
+                  <item.icon
+                    color={item.brand ? "default" : "currentColor"}
+                    className={item.invertOnDark ? "dark:invert" : undefined}
+                  />
                   {item.name}
                 </Badge>
               ))}

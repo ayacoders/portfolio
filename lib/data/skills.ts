@@ -39,6 +39,7 @@ import {
 export type Skill = {
   brand?: boolean
   icon: IconType
+  invertOnDark?: boolean
   name: string
 }
 
@@ -57,7 +58,7 @@ export const skillGroups: { items: Skill[]; title: string }[] = [
   {
     title: "Frontend Frameworks",
     items: [
-      { brand: true, icon: SiNextdotjs, name: "Next.js" },
+      { brand: true, icon: SiNextdotjs, invertOnDark: true, name: "Next.js" },
       { brand: true, icon: SiNuxt, name: "Nuxt.js" },
       { brand: true, icon: SiReact, name: "React" },
       { brand: true, icon: SiVuedotjs, name: "Vue" },
@@ -68,7 +69,7 @@ export const skillGroups: { items: Skill[]; title: string }[] = [
     title: "Backend Frameworks",
     items: [
       { brand: true, icon: SiNestjs, name: "NestJS" },
-      { brand: true, icon: SiExpress, name: "Express" },
+      { brand: true, icon: SiExpress, invertOnDark: true, name: "Express" },
       { brand: true, icon: SiLaravel, name: "Laravel" },
       { brand: true, icon: SiDotnet, name: "ASP.NET" },
       { brand: true, icon: SiNodedotjs, name: "Node.js" },
@@ -86,7 +87,9 @@ export const skillGroups: { items: Skill[]; title: string }[] = [
   },
   {
     title: "Cloud",
-    items: [{ brand: true, icon: SiVercel, name: "Vercel" }],
+    items: [
+      { brand: true, icon: SiVercel, invertOnDark: true, name: "Vercel" },
+    ],
   },
   {
     title: "Tools",
