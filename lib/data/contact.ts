@@ -1,12 +1,12 @@
 import { SiGithub, SiGmail } from "@icons-pack/react-simple-icons"
-import type { IconType } from "@icons-pack/react-simple-icons"
+import type { ComponentType } from "react"
 
-import { LinkedinIcon } from "@/components/portfolio/linkedin-icon"
+import { LinkedinIcon } from "@/components/portfolio/contact-section"
 
 export type ContactLink = {
   label: string
   href: string
-  icon: IconType
+  icon: ComponentType<{ color?: string }>
 }
 
 export const contactLinks: ContactLink[] = [
