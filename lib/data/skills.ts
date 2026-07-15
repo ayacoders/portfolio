@@ -21,7 +21,6 @@ import {
   SiSqlite,
   SiTailwindcss,
   SiTypescript,
-  SiVercel,
   SiVuedotjs,
 } from "@icons-pack/react-simple-icons"
 import type { IconType } from "@icons-pack/react-simple-icons"
@@ -83,12 +82,6 @@ export const skillGroups: { items: Skill[]; title: string }[] = [
       { brand: true, icon: SiMongodb, name: "MongoDB" },
       { brand: true, icon: SiSqlite, name: "SQLite" },
       { icon: Database, name: "SQL Server" },
-    ],
-  },
-  {
-    title: "Cloud",
-    items: [
-      { brand: true, icon: SiVercel, invertOnDark: true, name: "Vercel" },
     ],
   },
   {
