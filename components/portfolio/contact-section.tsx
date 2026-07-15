@@ -1,5 +1,10 @@
 import { SlideBlurIn } from "@/components/animated/slide-blur-in"
 import { Badge } from "@/components/ui/badge"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 import { contactLinks } from "@/lib/data/contact"
 
 export default function ContactSection() {
@@ -14,21 +19,27 @@ export default function ContactSection() {
           {contactLinks.map((link) => {
             const isMailto = link.href.startsWith("mailto:")
             return (
-              <Badge
-                key={link.label}
-                asChild
-                variant="outline"
-                className="h-9 gap-2 px-4 text-sm [&>svg]:size-4!"
-              >
-                <a
-                  href={link.href}
-                  target={isMailto ? undefined : "_blank"}
-                  rel={isMailto ? undefined : "noreferrer"}
-                >
-                  <link.icon color="currentColor" />
-                  {link.label}
-                </a>
-              </Badge>
+              <Tooltip key={link.label}>
+                <TooltipTrigger asChild>
+                  <Badge
+                    asChild
+                    variant="outline"
+                    className="h-9 gap-2 px-4 text-sm [&>svg]:size-4!"
+                  >
+                    <a
+                      href={link.href}
+                      target={isMailto ? undefined : "_blank"}
+                      rel={isMailto ? undefined : "noreferrer"}
+                    >
+                      <link.icon color="currentColor" />
+                      {link.label}
+                    </a>
+                  </Badge>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <span>{link.href.replace(/^mailto:/, "")}</span>
+                </TooltipContent>
+              </Tooltip>
             )
           })}
         </div>

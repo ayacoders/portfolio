@@ -12,15 +12,15 @@ export default function SkillsSection() {
 
         {skillGroups.map((group) => (
           <div key={group.title} className="flex flex-col gap-3">
-            <h3 className="font-mono text-sm tracking-widest text-muted-foreground">
+            <h3 className="text-center font-mono text-sm tracking-widest text-muted-foreground">
               {group.title}
             </h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {group.items.map((item) => (
                 <Badge
                   key={item.name}
                   variant="outline"
-                  className="h-7 gap-1.5 px-2.5 text-xs sm:h-9 sm:gap-2 sm:px-4 sm:text-base [&>svg]:size-3.5! sm:[&>svg]:size-5!"
+                  className="h-7 gap-1.5 px-2.5 text-xs sm:h-8 sm:gap-1.5 sm:px-3 sm:text-sm md:h-9 md:gap-2 md:px-4 md:text-base [&>svg]:size-3.5! sm:[&>svg]:size-4! md:[&>svg]:size-5!"
                 >
                   <item.icon
                     color={item.brand ? "default" : "currentColor"}

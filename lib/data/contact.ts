@@ -11,7 +11,7 @@ export type ContactLink = {
 
 export const contactLinks: ContactLink[] = [
   {
-    label: "bandebasethanpatrick25@gmail.com",
+    label: "Gmail",
     href: "mailto:bandebasethanpatrick25@gmail.com",
     icon: SiGmail,
   },

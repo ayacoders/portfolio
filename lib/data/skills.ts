@@ -86,12 +86,6 @@ export const skillGroups: { items: Skill[]; title: string }[] = [
     ],
   },
   {
-    title: "Cloud",
-    items: [
-      { brand: true, icon: SiVercel, invertOnDark: true, name: "Vercel" },
-    ],
-  },
-  {
     title: "Tools",
     items: [
       { brand: true, icon: SiGit, name: "Git" },
