@@ -8,7 +8,10 @@ const heroRoles = ["Builder.", "Designer.", "Developer."]
 
 export default function HeroSection() {
   return (
-    <section className="flex min-h-full w-full shrink-0 items-center justify-center px-6 py-12 md:py-20">
+    <section
+      id="hero"
+      className="flex min-h-full w-full shrink-0 items-center justify-center px-6 py-12 md:py-20"
+    >
       <SlideBlurIn className="mx-auto flex w-full max-w-5xl">
         <div className="w-full">
           <Float
