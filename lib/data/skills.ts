@@ -21,7 +21,6 @@ import {
   SiSqlite,
   SiTailwindcss,
   SiTypescript,
-  SiVercel,
   SiVuedotjs,
 } from "@icons-pack/react-simple-icons"
 import type { IconType } from "@icons-pack/react-simple-icons"
