@@ -4,7 +4,10 @@ import { skillGroups } from "@/lib/data/skills"
 
 export default function SkillsSection() {
   return (
-    <section className="flex min-h-full w-full shrink-0 items-center justify-center px-6 py-12 md:py-20">
+    <section
+      id="skills"
+      className="flex min-h-full w-full shrink-0 items-center justify-center px-6 py-12 md:py-20"
+    >
       <SlideBlurIn className="mx-auto flex w-full max-w-4xl flex-col gap-8">
         <h2 className="mx-auto font-space-grotesk text-4xl leading-none font-semibold text-balance md:text-5xl">
           Skills & <span className="text-brand-accent">Technologies</span>
