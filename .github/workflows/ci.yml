@@ -28,3 +28,23 @@ jobs:
 
       - name: Build
         run: bun run build
+
+  deploy:
+    needs: check
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            cd /opt/portfolio
+            git pull
+            docker build -t portfolio .
+            docker stop portfolio
+            docker rm portfolio
+            docker run -d --name portfolio --restart unless-stopped -p 127.0.0.1:3000:3000 portfolio
+            docker image prune -f
